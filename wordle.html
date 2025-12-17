@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .result-list {
+            list-style: none;
+            padding: 0;
+        }
+        .result-list li {
+            margin-bottom: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .result-list span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-right: 2px;
+            color: rgb(0, 0, 0);
+            border-radius: 4px;
+        }
+        .correct-pos {background-color: green;}
+        .correct-cha{background-color: rgb(176, 176, 0);}
+        .wrong-cha{background-color: rgb(178, 178, 178);}
+    </style>
+</head>
+<body>
+    <ul id="resultList" class = "result-list"></ul>
+    <label for = "userInput"> input : </label>
+    <input type="text" id="userInput" />
+    <button id="enterBtn">判定</button>
+    <script src = "wordle.js"></script>
+</body>
+</html>
