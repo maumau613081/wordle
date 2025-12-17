@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wordle.css">
+    <title>Wordleゲーム</title>
+</head>
+<body>
+    <div class = "parent-container">
+        <div class = "child-element">
+            <h1>Wordleゲーム</h1>
+            5文字の英単語を当ててください。<br>
+            <p class = "description">
+                緑 : 位置も文字も正解<br>
+                黄 : 文字は含むが位置が違う<br>
+                灰 : 文字が含まれていない
+            </p>
+
+            <div class = "input-area">
+                <label for = "userInput"> 単語を推測 : </label>
+                <input type="text" id="userInput" />
+                <button id="enterBtn">判定</button>
+            </div>
+            <ul id="resultList" class = "result-list"></ul>
+        </div>
+    </div>
+
+    <script src = "wordle.js"></script>
+</body>
+</html>
