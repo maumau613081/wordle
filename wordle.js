@@ -73,7 +73,7 @@ function checkArray(inputArray, answerArray){
 
 reset();
 
-enterButton.addEventListener('click', function(){
+function judgment(){
     const inputValue = inputField.value.toLowerCase();
     const inputArray = inputValue.split('');
 
@@ -91,6 +91,14 @@ enterButton.addEventListener('click', function(){
     if (inputValue === answer){
         alert('Congratulations! You guessed the correct word!');
         reset();
+    }
+}
+
+enterButton.addEventListener('click', judgment);
+
+inputField.addEventListener('keydown', function(event){
+    if (event.key === 'Enter'){
+        judgment();
     }
 });
 
