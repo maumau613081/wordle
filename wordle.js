@@ -89,8 +89,28 @@ function judgment(){
     resultList.appendChild(newListItem);
     inputField.value = '';
     if (inputValue === answer){
-        alert('Congratulations! You guessed the correct word!');
-        reset();
+        const lastResult = resultList.lastElementChild;
+        const spans = lastResult.querySelectorAll('span');
+        const overlay = document.getElementById('overlay');
+        const congratsText = document.getElementById('congratsText');
+        overlay.style.display = 'flex';
+        lastResult.classList.add('winner-row');
+        spans.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('bounce');
+            }, index * 100);
+            
+        });
+        setTimeout(() => {
+            congratsText.style.transform = 'scale(1)';
+        }, 500);
+        enterButton
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            congratsText.style.transform = 'scale(0)';
+            lastResult.classList.remove('winner-row');
+            reset();
+        }, 4000);
     }
 }
 
