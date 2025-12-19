@@ -93,6 +93,7 @@ function judgment(){
         const spans = lastResult.querySelectorAll('span');
         const overlay = document.getElementById('overlay');
         const congratsText = document.getElementById('congratsText');
+        lastResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
         overlay.style.display = 'flex';
         lastResult.classList.add('winner-row');
         spans.forEach((span, index) => {
